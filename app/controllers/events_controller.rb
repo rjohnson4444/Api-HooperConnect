@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.find(params[:event])
+    @event_info = Event.general_info(params[:event])
   end
 
   def show

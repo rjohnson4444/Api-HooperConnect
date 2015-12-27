@@ -5,7 +5,7 @@ class ActiveService
     @connection = Hurley::Client.new("http://api.amp.active.com/v2/search/")
   end
 
-  def search_by_keywords(params)
+  def response_results(params)
     parse_json(connection.get("?" + params.to_query + active_key))
   end
 

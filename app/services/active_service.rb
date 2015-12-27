@@ -2,11 +2,11 @@ class ActiveService
   attr_reader :connection
 
   def initialize
-    @connection = Hurley::Client.new("http://api.amp.active.com/v2/search?")
+    @connection = Hurley::Client.new("http://api.amp.active.com/v2/search/")
   end
 
-  def search_by_keywords(words)
-    
+  def response_results(params)
+    parse_json(connection.get("?" + params.to_query + active_key))
   end
 
   private

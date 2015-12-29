@@ -3,14 +3,11 @@ class Event
     ActiveService.new
   end
 
-  def self.find(params)
-    build_object(service.response_results(params))
-  end
-
   def self.general_info(params)
     raw_data = service.response_results(params)
     new_data = raw_data[:results].map { |event| { event_name: event[:assetName],
-                                                  event_registration_url: event[:registrationUrlAdr],
+                                                  event_registration_url: event[:urlAdr],
+                                                  organization_name: event[:organization][:organizationName],
                                                   start_date: event[:activityStartDate],
                                                   end_date: event[:activityEndDate],
                                                   description: event[:assetDescriptions].first[:description],
@@ -18,9 +15,7 @@ class Event
                                      }
 
     new_data.map { |event| build_object(event) }
-    binding.pry
   end
-
 
   private
 

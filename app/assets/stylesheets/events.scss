@@ -1,3 +1,23 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body#new {
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3);
+  background: linear-gradient(to left, #8e9eab , #eef2f3);
+}
+
+body > .grid {
+  height: 100%;
+}
+
+.column {
+  max-width: 450px;
+  padding-top: 50%;
+}
+
+h1 {
+  margin: 15px auto !important;
+  text-align: center;
+}

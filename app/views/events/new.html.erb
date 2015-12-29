@@ -1,8 +1,8 @@
 <h1>Find Basketball Events Near You</h1>
 <%= form_tag events_path do %>
-  <%= label_tag "Location" %>
-  <%= text_field_tag "event[near]", nil, placeholder: "Denver, CO" %>
-  <%= label_tag "Event" %>
-  <%= text_field_tag "event[query]" %>
+  <%= label_tag "Location" %><br>
+  <%= text_field_tag "event[near]", nil, placeholder: "Denver, CO" %><br><br>
+  <%= label_tag "Event" %><br>
+  <%= text_field_tag "event[query]" %><br><br>
   <%= submit_tag "Search" %>
 <% end %>

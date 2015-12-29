@@ -1,26 +1,8 @@
-<body id="new">
-  <div class="ui middle aligned center aligned grid">
-    <div class="column">
-      <h2 class="ui black image header">
-        <div class="content">
-          Find Sports Activity
-        </div>
-      </h2>
-      <form class="ui large form">
-        <div class="ui segment">
-          <%= form_tag events_path do %>
-          <div class="field">
-            <%= label_tag "Location" %>
-            <%= text_field_tag "event[near]", nil, placeholder: "Denver, CO" %>
-          </div>
-          <div class="field">
-            <%= label_tag "Keywords" %>
-            <%= text_field_tag "event[query]", nil, placeholder: "Boys Basketball" %>
-          </div>
-          <%= submit_tag "Search", class: "ui fluid large black submit button" %>
-          <% end %>
-        </div>
-      </form>
-    </div>
-  </div>
-</body>
+<h1>Find Basketball Events Near You</h1>
+<%= form_tag events_path do %>
+  <%= label_tag "Location" %><br>
+  <%= text_field_tag "event[near]", nil, placeholder: "Denver, CO" %><br><br>
+  <%= label_tag "Event" %><br>
+  <%= text_field_tag "event[query]" %><br><br>
+  <%= submit_tag "Search" %>
+<% end %>

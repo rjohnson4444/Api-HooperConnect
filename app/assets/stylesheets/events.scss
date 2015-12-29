@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body#new {
-  background-color: #DADADA;
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to left, #8e9eab , #eef2f3);
+  background: linear-gradient(to left, #8e9eab , #eef2f3);
 }
 
 body > .grid {
@@ -13,4 +15,9 @@ body > .grid {
 .column {
   max-width: 450px;
   padding-top: 50%;
+}
+
+h1 {
+  margin: 15px auto !important;
+  text-align: center;
 }
